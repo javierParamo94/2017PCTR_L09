@@ -2,6 +2,7 @@ package p012;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
+
 //TODO Transform the code to be used safely in a concurrent context.  
 public class Ball {
        //DONE  Find an archive named Ball.png 
@@ -30,7 +31,11 @@ public class Ball {
 		}
 		x += dx;   
 		y += dy;
-		//TODO Check postcondition
+		//DONE Check postcondition
+		assert Math.abs(x  - Board.RIGHTBOARD) >  Math.abs(dx):"Ves esto porque una bola se salio por el lado de la derecha";
+		assert Math.abs(y  - Board.BOTTOMBOARD) >  Math.abs(dy):"Ves esto porque una bola se salio por abajo";
+		assert Math.abs(x + 32 - Board.LEFTBOARD) >  Math.abs(dx):"Ves esto porque una bola se salio por el lado de la Izquierda";
+		assert Math.abs(y + 32 - Board.TOPBOARD) >  Math.abs(dy):"Ves esto porque una bola se salio por arriba";
 	}
 
 	public void reflect() {
