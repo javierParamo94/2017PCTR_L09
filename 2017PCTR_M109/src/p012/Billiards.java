@@ -4,6 +4,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import p012.Ball;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -56,6 +58,9 @@ public class Billiards extends JFrame {
 
 	private void initBalls() {
 		// TODO init balls
+		// DONE init balls
+		// instanciamos un array del tamaño N_BALL
+		balls = new Ball[N_BALL];
 	}
 
 	private class StartListener implements ActionListener {
